@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+
+    <style name="Anim_fade" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/fade</item>
+    </style>
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/trans_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/trans_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/trans_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/trans_right_out</item>
+    </style>
+
+</resources>

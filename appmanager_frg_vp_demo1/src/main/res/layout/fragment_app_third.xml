@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <!--由于有EditText的存在,父容器不能写一下属性,否则输入框
+    无法获得焦点-->
+    <!--android:descendantFocusability="blocksDescendants"-->
+
+    <include
+        android:id="@+id/include_1"
+        layout="@layout/search_layout"></include>
+
+    <!--排序方式-->
+    <LinearLayout
+        android:layout_below="@id/include_1"
+        android:id="@+id/ll_sort_type"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_sort_type_internal"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txv_sort_app"
+                android:text="选择排序方式"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/deep_grey"
+                android:background="@null"
+                android:layout_width="100dp"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:id="@+id/imgv_arrow"
+                android:src="@drawable/arrowdown"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                />
+
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--line-->
+    <LinearLayout
+        android:layout_below="@id/ll_sort_type"
+        android:id="@+id/ll_line"
+        android:orientation="horizontal"
+        android:background="@color/grey1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <!--<ListView
+        android:id="@+id/lv_app_third"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>-->
+
+    <!--自定义的ListView-->
+    <com.example.administrator.appmanager_frg_vp_demo1.mView.MyListView
+        android:layout_below="@id/ll_line"
+        android:id="@+id/lv_my_forThird"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--悬浮提示文字-->
+    <TextView
+        android:id="@+id/txv_search_result"
+        android:text="没有匹配结果!请重新输入或下拉刷新!"
+        android:maxWidth="400sp"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColor="@color/deep_grey"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

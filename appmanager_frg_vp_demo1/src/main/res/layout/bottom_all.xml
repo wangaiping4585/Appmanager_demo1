@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@color/mediumturquoise"
+    >
+
+
+
+    <!--应用管理-->
+    <LinearLayout
+        android:id="@+id/ll_app"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+       <!-- <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/app" />-->
+
+        <TextView
+            android:id="@+id/txv_app"
+            android:text="应用管理"
+            android:textColor="@color/deep_grey"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    <View
+        android:background="@color/grey2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"></View>
+
+    <!--文件管理-->
+    <LinearLayout
+        android:id="@+id/ll_file"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--<ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/file" />-->
+
+        <TextView
+            android:id="@+id/txv_file"
+            android:textColor="@color/deep_grey"
+            android:text="文件管理"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:background="@color/grey2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"></View>
+
+    <!--系统设置-->
+    <LinearLayout
+        android:id="@+id/ll_option"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+       <!-- <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/me" />-->
+        <TextView
+            android:id="@+id/txv_option"
+            android:textColor="@color/deep_grey"
+            android:text="版本说明"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <!--top-->
+    <include
+        android:id="@+id/ll_file_top"
+        layout="@layout/top_all"></include>
+
+    <!--search-->
+    <LinearLayout
+        android:id="@+id/ll_search_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_file_top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/edt_search_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/search_edittext_shape"
+                    android:drawableLeft="@drawable/search_icon"
+                    android:drawablePadding="5dp"
+                    android:focusable="true"
+                    android:hint="请输入关键字"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/search_iv_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/iv_delete_bg"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--排序方式-->
+    <LinearLayout
+        android:id="@+id/ll_sort_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_search_file"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_sort_type_internal_file"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txv_sort_file"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="选择排序方式"
+                android:textColor="@color/deep_grey"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imgv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:focusable="false"
+                android:src="@drawable/arrowdown" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--line below sort-->
+    <LinearLayout
+        android:id="@+id/ll_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_sort_type"
+        android:background="@color/grey1"
+        android:orientation="horizontal"></LinearLayout>
+
+
+
+
+    <!--无文件时显示的文字和图标提示-->
+    <TextView
+        android:id="@+id/txv_nofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="100dp"
+        android:text="无文件"
+        android:textColor="@color/moredeep_grey"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgv_nofile"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_below="@id/txv_nofile"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo_folder"
+        android:visibility="gone" />
+
+
+    <!--bottom-->
+    <include
+        android:id="@+id/include_file_bottom"
+        layout="@layout/bottom_all"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true" />
+
+    <!--line-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/include_file_bottom"
+        android:background="@color/grey2"></LinearLayout>
+
+
+
+
+    <!--动态文件路径滚动条-->
+    <HorizontalScrollView
+        android:id="@+id/hsv_topbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/include_file_bottom"
+        android:background="#20f0f000"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_topbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地存储"
+                android:textColor="@color/moredeep_grey"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!--line-->
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/hsv_topbar2"
+        android:background="@color/grey1"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_file"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/hsv_topbar2"
+        android:layout_below="@id/ll_line1"
+        android:cacheColorHint="#00000000" />
+
+
+
+
+</RelativeLayout>

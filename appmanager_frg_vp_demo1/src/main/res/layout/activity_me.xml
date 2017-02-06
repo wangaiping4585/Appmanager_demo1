@@ -1,0 +1,29 @@
+<!--命名控件规则:http://schemas.android.com/apk/res/加上我们的包名,或者res-auto-->
+<com.example.administrator.appmanager_frg_vp_demo1.mView.BinarySlidingMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wxs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    wxs:rightPadding="100dp">
+    <!--这里设置抽屉的边距-->
+
+
+    <com.example.administrator.appmanager_frg_vp_demo1.mView.MyLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <!--左边抽屉-->
+        <include layout="@layout/layout_menu_left" />
+
+        <!--中间-->
+        <include layout="@layout/layout_menu_center"/>
+
+        <!--右边抽屉-->
+        <!--<include layout="@layout/layout_menu_right" />-->
+    </com.example.administrator.appmanager_frg_vp_demo1.mView.MyLinearLayout>
+
+</com.example.administrator.appmanager_frg_vp_demo1.mView.BinarySlidingMenu>

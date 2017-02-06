@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Tab-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+
+    <!--第三方-->
+    <RelativeLayout
+        android:id="@+id/rl_tab_appthird"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent">
+
+
+        <TextView
+            android:id="@+id/txv_tab_appthird"
+            android:text="已安装应用"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <FrameLayout
+            android:id="@+id/fl_tabline_third"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/forestgreen"
+            android:layout_width="90dp"
+            android:layout_height="4dp"></FrameLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <!--系统-->
+    <RelativeLayout
+        android:id="@+id/rl_tab_appsys"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent">
+
+
+        <TextView
+            android:id="@+id/txv_tab_appsys"
+            android:text="系统应用"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <FrameLayout
+            android:id="@+id/fl_tabline_sys"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/forestgreen"
+            android:layout_width="90dp"
+            android:layout_height="4dp"
+            android:visibility="invisible"
+            ></FrameLayout>
+
+    </RelativeLayout>
+
+    <!--系统信息-->
+    <!-- <LinearLayout
+         android:id="@+id/ll_tab_detail"
+         android:layout_weight="1"
+         android:layout_width="0dp"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:layout_height="fill_parent">
+
+
+         <TextView
+             android:id="@+id/txv_tab_detail"
+             android:text="设置"
+             android:textStyle="bold"
+             android:textColor="@color/gray"
+             android:textSize="16sp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+     </LinearLayout>-->
+
+</LinearLayout>

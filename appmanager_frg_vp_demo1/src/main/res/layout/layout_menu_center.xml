@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_me_center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/eee">
+
+    <ImageView
+        android:id="@+id/imgv_angele_logo"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/angele_logo" />
+
+    <!--名称-->
+   <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/txv_team"
+        android:layout_above="@id/imgv_angele_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="氣象台"
+        android:textColor="#dd000000"
+        android:textSize="28sp"
+        android:textStyle="italic" />
+
+
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txv_honor"
+        android:layout_below="@id/imgv_angele_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="荣誉出品"
+        android:textColor="#dd000000"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <!--制作人-->
+    <!--<LinearLayout
+        android:id="@+id/ll_teamname"
+        android:layout_below="@id/txv_honor"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:textStyle="italic"
+            android:layout_marginRight="5dp"
+            android:text="孙强"
+            android:gravity="center"
+            android:textColor="#99000000"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="italic"
+            android:layout_marginRight="5dp"
+            android:text="韩时雨"
+            android:textColor="#aa000000"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="italic"
+            android:layout_marginRight="5dp"
+            android:text="李冬冬"
+            android:textColor="#aa000000"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="italic"
+            android:layout_marginRight="5dp"
+            android:text="刘建新"
+            android:textColor="#aa000000"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="italic"
+            android:text="王逊时"
+            android:textColor="#aa000000"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>-->
+
+    <!--博客地址-->
+    <TextView
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txv_honor"
+        android:text="http://blog.csdn.net/xunshishi"
+        android:layout_centerHorizontal="true"
+        android:textColor="#aa000000"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

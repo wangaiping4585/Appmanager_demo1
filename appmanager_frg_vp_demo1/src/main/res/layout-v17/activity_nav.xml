@@ -1,0 +1,196 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey3"
+    android:orientation="vertical">
+
+    <!--top-->
+    <include layout="@layout/top_all"></include>
+
+    <!--banner大图-->
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/imgv_banner_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher" />
+    </FrameLayout>
+
+    <!--&lt;!&ndash;横线&ndash;&gt;
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey2"></LinearLayout>-->
+
+    <!--横向滚动条-->
+    <com.example.administrator.appmanager_frg_vp_demo1.mView.MyHorizontalScrollView
+        android:id="@+id/id_horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/id_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+    </com.example.administrator.appmanager_frg_vp_demo1.mView.MyHorizontalScrollView>
+
+
+    <!--横线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/grey2"></LinearLayout>
+
+
+    <!--功能模块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal">
+
+        <!--应用管理器-->
+        <LinearLayout
+            android:id="@+id/ll_toapp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/navactivity_tab_selector"
+            android:gravity="center"
+            android:onClick="toApp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/app" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用管理"
+                android:textSize="18sp"
+                android:textColor="@color/moredeep_grey"/>
+
+        </LinearLayout>
+
+        <!--竖线-->
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey2"></LinearLayout>
+
+        <!--文件管理器-->
+        <LinearLayout
+            android:id="@+id/ll_tofile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/navactivity_tab_selector"
+            android:gravity="center"
+            android:onClick="toFile"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="文件管理"
+                android:textSize="18sp"
+                android:textColor="@color/moredeep_grey"/>
+
+        </LinearLayout>
+
+        <!--竖线-->
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey2"></LinearLayout>
+
+        <!--关于我们-->
+        <LinearLayout
+            android:id="@+id/ll_tome"
+            android:onClick="toMe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/navactivity_tab_selector"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/me" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关于我们"
+                android:textSize="18sp"
+                android:textColor="@color/moredeep_grey"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--横线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey2"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Copyright 2016 AngryElephant. All rights reserved. "
+            android:textColor="#555555" />
+
+        <TextClock
+            android:id="@+id/textClock2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

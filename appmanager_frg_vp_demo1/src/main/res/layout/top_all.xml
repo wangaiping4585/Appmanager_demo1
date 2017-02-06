@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/royalblue">
+
+    <LinearLayout
+        android:id="@+id/ll_exit"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrowexit" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ll_exit"
+        android:text="香蕉管理器"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/ll_corner"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/imgv_arrowcorner"
+            android:src="@drawable/arrowcorner_change_selector"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>
